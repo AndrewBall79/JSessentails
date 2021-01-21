@@ -4,7 +4,7 @@
     padding: 2em;
     height: 90vh;
     justify-content: center;
-    align-items: middle;
+    align-items: center;
 }
 
 .clockbox,
@@ -15,8 +15,8 @@
 /* Clock styles */
 .circle {
     fill: none;
-    stroke: #000;
-    stroke-width: 9;
+    stroke: rgba(100,0,100,1);
+    stroke-width: 12;
     stroke-miterlimit: 10;
 }
 
@@ -46,7 +46,7 @@
 
 .second-arm {
     fill: none;
-    stroke: #000;
+    stroke: rgba(0, 255, 122, .5);
     stroke-width: 4;
     stroke-miterlimit: 10;
 }
@@ -62,5 +62,5 @@
 #minute,
 #second {
     transform-origin: 300px 300px;
-    transition: transform .5s ease-in-out;
+    transition: transform 100ms ease-in-out;
 }
