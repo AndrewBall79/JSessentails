@@ -9,7 +9,6 @@ while (MAX) {
     if (randomValue == testNumber) {
         break;
     }
-
     console.log("Round " + i + ": " + randomValue);
     i++;
 }
