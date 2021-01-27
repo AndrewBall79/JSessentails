@@ -47,12 +47,17 @@ function spellCheck() {
 
 }
 
+let test  = 0;
 // Start the timer:
 function start() {
     let textEnterdLength = testArea.value.length;
     if (textEnterdLength === 0) {
-
+        if (test>=1){
+            console.log("the test function is triggered");
+        }
         interval = setInterval(runTimer, 10);
+        test++
+        console.info(interval);
     }
 }
 
