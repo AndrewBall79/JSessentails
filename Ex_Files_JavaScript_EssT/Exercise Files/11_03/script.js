@@ -6,6 +6,7 @@ const theTimer = document.querySelector(".timer");
 
 var timer = [0,0,0,0];
 var interval;
+var timerRunning = false;
 
 
 // Add leading zero to numbers 9 or below (purely for aesthetics):
@@ -47,16 +48,12 @@ function spellCheck() {
 
 }
 
-let test  = 0;
 // Start the timer:
 function start() {
     let textEnterdLength = testArea.value.length;
-    if (textEnterdLength === 0) {
-        if (test>=1){
-            console.log("the test function is triggered");
-        }
+    if (textEnterdLength === 0 && !timerRunning) {
+        timerRunning = true;
         interval = setInterval(runTimer, 10);
-        test++
         console.info(interval);
     }
 }
@@ -66,6 +63,7 @@ function reset() {
     clearInterval(interval);
     interval = null;
     timer = [0,0,0,0];
+    timerRunning = false;
 
 
     testArea.value = "";
